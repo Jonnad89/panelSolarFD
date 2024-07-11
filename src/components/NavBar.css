@@ -1,0 +1,102 @@
+/* Estilos generales para la navbar */
+.navbar {
+    background-color: #2196F3;
+    color: white;
+    padding: 10px;
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFEB3B;
+    white-space: nowrap;
+  }
+  
+  .menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+    color: white;
+  }
+  
+  .menu {
+    display: flex;
+    
+  }
+  
+  .menu ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu ul li {
+    margin: 0 15px;
+  }
+  
+  .menu ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  .menu ul li a:hover {
+    color: #FFEB3B; /* Amarillo */
+  }
+  
+  .menu.active {
+    display: block;
+    max-height: 500px;
+  }
+  
+  /* Estilos para móviles */
+  @media (max-width: 768px) {
+    .logo{
+        font-size: 20px;
+        position: relative;
+        left: 50px;
+    }
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #2196F3; /* Azul */
+        max-height: 0;
+        opacity: 0;
+        transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        overflow: hidden;
+    }
+  
+    .menu ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .menu ul li {
+      margin: 10px 0;
+    }
+  
+    .menu-icon {
+      display: block;
+    }
+    .navbar .menu-icon{
+        display: flex;
+        position: relative;
+        right: 120px;
+    }
+  
+    .navbar-container {
+      justify-content: space-between;
+    }
+    .menu.active {
+        display: flex;
+        max-height: 500px; /* Ajusta este valor según la altura del contenido */
+        opacity: 1;
+      }
+  }
+  
